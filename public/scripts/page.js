@@ -1,8 +1,7 @@
-function Page() {
-  this.db = firebase.database();
-  this.auth = firebase.auth();
+function Page() {}
 
-  this.auth.onAuthStateChanged(on_auth_state_change);
+Page.prototype.init = function() {
+  firebase.auth().onAuthStateChanged(this.on_auth_state_change.bind(this));
 }
 
 /**
@@ -13,9 +12,9 @@ function Page() {
 Page.prototype.on_auth_state_change = function(user) {
   if (user) {
     window.user = user
-    once_authenicated(user);
+    this.once_authenicated(user);
   } else {
-    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider());
     window.user = null;
   }
 }

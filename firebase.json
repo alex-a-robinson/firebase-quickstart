@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist",
+    "rewrites": [
+      {"source": "/", "destination": "/index.html"},
+      {"source": "/api/**", "function": "api"},
+      {"source": "*", "destination": "/404.html"}
+      ]
+    }
+  }

@@ -1,0 +1,29 @@
+{
+  "name": "firebase-quickstart",
+  "version": "1.0.0",
+  "description": "Quickstart firebase code template",
+  "main": "index.js",
+  "scripts": {
+    "build": "grunt",
+    "clean": "grunt clean",
+    "serve": "firebase serve --only functions,hosting",
+    "preserve": "npm run build"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ejs": "^0.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/begly/firebase-quickstart.git"
+  },
+  "private": true,
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "firebase-functions": "^0.6.0"
+  }
+}

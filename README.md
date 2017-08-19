@@ -9,3 +9,6 @@ $ npm install
 $ npm --prefix ./functions install ./functions
 $ npm run serve
 ```
+
+Update google analytics tracking code in public/views/partials/footer.ejs
+https://analytics.google.com/analytics/web/#management/Settings/a104957037w156718072p158285610/%3Fm.page%3DTrackingCode/
